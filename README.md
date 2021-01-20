@@ -1,7 +1,5 @@
 # OMD-Clock
 
-AKA The Clock of Pain
+Tracks how long it has been since the One More Day storyline ended the marriage of Peter Parker and Mary Jane Watson in The Amazing Spider-Man #545.
 
-A simple counter to track how long it has been since Marvel destroyed my childhood.
-
-Built with TypeScript, webpack.
+Built with [TypeScript](https://www.typescriptlang.org/), [webpack](https://webpack.js.org/), [Luxon](https://moment.github.io/luxon/index.html).
