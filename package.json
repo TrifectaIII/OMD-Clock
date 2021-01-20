@@ -13,7 +13,6 @@
   "dependencies": {
     "@types/luxon": "^1.25.1",
     "css-loader": "^5.0.1",
-    "file-loader": "^6.2.0",
     "luxon": "^1.25.0",
     "sass": "^1.32.4",
     "sass-loader": "^10.1.1",

@@ -30,14 +30,6 @@ module.exports = {
                     'sass-loader',
                 ],
             },
-            //static files rule
-            {
-                test: /\.(html|png|ico|webmanifest)$/i,
-                loader: 'file-loader',
-                options : {
-                    name: '[name].[ext]',
-                },
-            },
         ],
     },
 
