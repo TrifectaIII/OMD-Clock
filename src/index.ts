@@ -1,5 +1,13 @@
 import './index.html';
 import './style.scss';
+import './static/android-chrome-192x192.png';
+import './static/android-chrome-512x512.png';
+import './static/apple-touch-icon.png';
+import './static/favicon-16x16.png';
+import './static/favicon-32x32.png';
+import './static/favicon.ico';
+import './static/site.webmanifest';
+
 import {Interval, DateTime, Duration, DurationObject} from 'luxon';
 
 var timeH1: HTMLElement | null = document.getElementById('timeH1');
@@ -18,9 +26,9 @@ function update () {
         'second',
     ).toObject();
     const durationString: string = Object.entries(durationObj).map(([key, value]):string => {
-        if (!parseInt(value)) return ''; 
+        if (parseInt(value) === 1) key = key.slice(0,-1);
         return parseInt(value.toString()).toString() + ' ' + key.toString();
-    }).filter((e: string): boolean => e!='').join('<br>');
+    }).join('<br>');
     timeH1.innerHTML = durationString;
 }
 

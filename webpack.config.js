@@ -23,7 +23,7 @@ module.exports = {
             },
             //html rule
             {
-                test: /\.html$/i,
+                test: /\.(html|png|ico|webmanifest)$/i,
                 loader: 'file-loader',
                 options : {
                     name: '[name].[ext]',

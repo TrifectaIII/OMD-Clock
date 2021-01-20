@@ -20,8 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "h1 {\n  color: red;\n}\nh1 div {\n  color: blue;\n}", "",{"version":3,"sources":["webpack://./src/style.scss"],"names":[],"mappings":"AAAA;EACI,UAAA;AACJ;AACI;EACI,WAAA;AACR","sourcesContent":["h1 {\r\n    color: red;\r\n\r\n    div {\r\n        color: blue;\r\n    }\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  text-align: center;\n  font-family: \"Josefin Sans\", sans-serif;\n}\n\na {\n  text-decoration: none;\n}\n\na:hover {\n  text-decoration: underline;\n}\n\n#timeH1 {\n  text-transform: capitalize;\n}", "",{"version":3,"sources":["webpack://./src/style.scss"],"names":[],"mappings":"AAEA;EACI,kBAAA;EACA,uCAAA;AAAJ;;AAGA;EACI,qBAAA;AAAJ;;AAGA;EACI,0BAAA;AAAJ;;AAGA;EACI,0BAAA;AAAJ","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');\r\n\r\nbody {\r\n    text-align: center;\r\n    font-family: 'Josefin Sans', sans-serif;\r\n}\r\n\r\na {\r\n    text-decoration: none;\r\n}\r\n\r\na:hover {\r\n    text-decoration: underline;\r\n}\r\n\r\n#timeH1 {\r\n    text-transform: capitalize;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -155,6 +156,104 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "index.html");
+
+/***/ }),
+
+/***/ "./src/static/android-chrome-192x192.png":
+/*!***********************************************!*\
+  !*** ./src/static/android-chrome-192x192.png ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "android-chrome-192x192.png");
+
+/***/ }),
+
+/***/ "./src/static/android-chrome-512x512.png":
+/*!***********************************************!*\
+  !*** ./src/static/android-chrome-512x512.png ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "android-chrome-512x512.png");
+
+/***/ }),
+
+/***/ "./src/static/apple-touch-icon.png":
+/*!*****************************************!*\
+  !*** ./src/static/apple-touch-icon.png ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "apple-touch-icon.png");
+
+/***/ }),
+
+/***/ "./src/static/favicon-16x16.png":
+/*!**************************************!*\
+  !*** ./src/static/favicon-16x16.png ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "favicon-16x16.png");
+
+/***/ }),
+
+/***/ "./src/static/favicon-32x32.png":
+/*!**************************************!*\
+  !*** ./src/static/favicon-32x32.png ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "favicon-32x32.png");
+
+/***/ }),
+
+/***/ "./src/static/favicon.ico":
+/*!********************************!*\
+  !*** ./src/static/favicon.ico ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "favicon.ico");
+
+/***/ }),
+
+/***/ "./src/static/site.webmanifest":
+/*!*************************************!*\
+  !*** ./src/static/site.webmanifest ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "site.webmanifest");
 
 /***/ }),
 
@@ -8778,6 +8877,13 @@ module.exports = function (list, options) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 __webpack_require__(/*! ./index.html */ "./src/index.html");
 __webpack_require__(/*! ./style.scss */ "./src/style.scss");
+__webpack_require__(/*! ./static/android-chrome-192x192.png */ "./src/static/android-chrome-192x192.png");
+__webpack_require__(/*! ./static/android-chrome-512x512.png */ "./src/static/android-chrome-512x512.png");
+__webpack_require__(/*! ./static/apple-touch-icon.png */ "./src/static/apple-touch-icon.png");
+__webpack_require__(/*! ./static/favicon-16x16.png */ "./src/static/favicon-16x16.png");
+__webpack_require__(/*! ./static/favicon-32x32.png */ "./src/static/favicon-32x32.png");
+__webpack_require__(/*! ./static/favicon.ico */ "./src/static/favicon.ico");
+__webpack_require__(/*! ./static/site.webmanifest */ "./src/static/site.webmanifest");
 var luxon_1 = __webpack_require__(/*! luxon */ "./node_modules/luxon/build/cjs-browser/luxon.js");
 var timeH1 = document.getElementById('timeH1');
 function update() {
@@ -8789,10 +8895,10 @@ function update() {
     var durationObj = duration.shiftTo('year', 'month', 'day', 'hour', 'minute', 'second').toObject();
     var durationString = Object.entries(durationObj).map(function (_a) {
         var key = _a[0], value = _a[1];
-        if (!parseInt(value))
-            return '';
+        if (parseInt(value) === 1)
+            key = key.slice(0, -1);
         return parseInt(value.toString()).toString() + ' ' + key.toString();
-    }).filter(function (e) { return e != ''; }).join('<br>');
+    }).join('<br>');
     timeH1.innerHTML = durationString;
 }
 setInterval(update, 100);

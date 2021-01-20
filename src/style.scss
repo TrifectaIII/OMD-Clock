@@ -1,7 +1,18 @@
-h1 {
-    color: red;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
-    div {
-        color: blue;
-    }
+body {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#timeH1 {
+    text-transform: capitalize;
 }
