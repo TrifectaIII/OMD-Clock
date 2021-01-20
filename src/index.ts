@@ -4,12 +4,13 @@ import './style.scss';
 //import date/time library luxon
 import {DateTime, DurationObject} from 'luxon';
 
-//generate DateTime object for release of OMD
-const oneMoreDay: DateTime = DateTime.utc(2007, 12, 28, 5);
 
 //access html elements
 var timeH1: HTMLElement | null = document.getElementById('timeH1');
 var marriedH3: HTMLElement | null = document.getElementById('marriedH3');
+
+//generate DateTime object for release of OMD
+const oneMoreDay: DateTime = DateTime.utc(2007, 12, 28, 5);
 
 //calculate time between marriage and OMD
 if (marriedH3) {
