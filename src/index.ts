@@ -7,11 +7,15 @@ import {DateTime, DurationObject} from 'luxon';
 
 //access html elements
 var timeH1: HTMLElement | null = document.getElementById('timeH1');
+var omdSpan: HTMLElement | null = document.getElementById('omdSpan');
 var marriedH3: HTMLElement | null = document.getElementById('marriedH3');
 var matchedSpan: HTMLElement | null = document.getElementById('matchedSpan');
 
 //generate DateTime object for release of OMD
 const oneMoreDay: DateTime = DateTime.utc(2007, 12, 28, 5);
+
+//insert date of omd
+omdSpan && (omdSpan.innerHTML = oneMoreDay.toFormat('DDD'));
 
 // insert time information re: their marriage into HTML
 if (marriedH3 && matchedSpan) {
