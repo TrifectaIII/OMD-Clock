@@ -8,14 +8,21 @@ import {DateTime, DurationObject} from 'luxon';
 //access html elements
 var timeH1: HTMLElement | null = document.getElementById('timeH1');
 var marriedH3: HTMLElement | null = document.getElementById('marriedH3');
+var matchedSpan: HTMLElement | null = document.getElementById('matchedSpan');
 
 //generate DateTime object for release of OMD
 const oneMoreDay: DateTime = DateTime.utc(2007, 12, 28, 5);
 
-//calculate time between marriage and OMD
-if (marriedH3) {
+
+if (marriedH3 && matchedSpan) {
+    //calculate time between marriage and OMD
     const marriage: DateTime = DateTime.utc(1987, 6, 9, 5);
-    marriedH3.innerHTML = durationObjToString(dateTimeDiff(marriage, oneMoreDay), true);
+    const diff: DurationObject = dateTimeDiff(marriage, oneMoreDay);
+    marriedH3.innerHTML = durationObjToString(diff, true);
+
+    //calculate when OMD clock will match that duration
+    const matched: DateTime = oneMoreDay.plus(diff);
+    matchedSpan.innerHTML = matched.toFormat('LLLL dd, yyyy');
 }
 
 //execute update function 10 times a second, and immediately
@@ -35,10 +42,7 @@ function update () {
     const durationObj: DurationObject = dateTimeDiff(oneMoreDay, now);
 
     //convert to one string for HTML insertion
-    const durationString: string = durationObjToString(durationObj);
-
-    //insert into HTML
-    timeH1.innerHTML = durationString;
+    timeH1.innerHTML = durationObjToString(durationObj);
 }
 
 //function to calculate diff between two DateTimes as a DurationObject
