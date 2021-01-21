@@ -13,8 +13,9 @@ var matchedSpan: HTMLElement | null = document.getElementById('matchedSpan');
 //generate DateTime object for release of OMD
 const oneMoreDay: DateTime = DateTime.utc(2007, 12, 28, 5);
 
-
+// insert time information re: their marriage into HTML
 if (marriedH3 && matchedSpan) {
+    
     //calculate time between marriage and OMD
     const marriage: DateTime = DateTime.utc(1987, 6, 9, 5);
     const diff: DurationObject = dateTimeDiff(marriage, oneMoreDay);
@@ -91,8 +92,11 @@ function dateTimeDiff(before: DateTime, after: DateTime): DurationObject {
 
 //function to convert DurationObject into string with line breaks
 function durationObjToString(durationObj: DurationObject, trim?: boolean): string {
+    
+    //convert to array of strings which represent the lines
     const durationLines: string[] = Object.entries(durationObj).map(([key, value]):string => {
         
+        //remove 0-lines if trim active
         if (trim && value === 0) return '';
 
         //add an s to key if none is there
@@ -105,5 +109,6 @@ function durationObjToString(durationObj: DurationObject, trim?: boolean): strin
         return parseInt(value.toString()).toString() + ' ' + key.toString();
     });
 
+    //remove empty lines and join with line breaks
     return durationLines.filter((e: string): boolean => e != '').join('<br>');
 }
