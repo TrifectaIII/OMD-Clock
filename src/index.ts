@@ -22,7 +22,7 @@ if (marriedH3 && matchedSpan) {
 
     //calculate when OMD clock will match that duration
     const matched: DateTime = oneMoreDay.plus(diff);
-    matchedSpan.innerHTML = matched.toFormat('LLLL dd, yyyy');
+    matchedSpan.innerHTML = matched.toFormat('DDD');
 }
 
 //execute update function 10 times a second, and immediately
