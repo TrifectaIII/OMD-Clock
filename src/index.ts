@@ -28,7 +28,8 @@ if (marriedH3 && matchedSpan) {
     //calculate when OMD clock will match that duration
     const matched: DateTime = oneMoreDay
         .plus(diff)
-        .minus({day:1} as DurationObject);
+        .minus({day:1} as DurationObject) //subtract last days duration
+        .toLocal(); //convert to local timezone
     matchedSpan.innerHTML = matched.toFormat('DDD');
 }
 
