@@ -11,6 +11,7 @@ module.exports = {
         contentBase: path.join(__dirname, 'docs'),
         compress: true,
         port: 8000,
+        writeToDisk: true,
     },
 
     module: {

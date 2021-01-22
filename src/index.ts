@@ -26,7 +26,9 @@ if (marriedH3 && matchedSpan) {
     marriedH3.innerHTML = durationObjToString(diff, true);
 
     //calculate when OMD clock will match that duration
-    const matched: DateTime = oneMoreDay.plus(diff);
+    const matched: DateTime = oneMoreDay
+        .plus(diff)
+        .minus({day:1} as DurationObject);
     matchedSpan.innerHTML = matched.toFormat('DDD');
 }
 
