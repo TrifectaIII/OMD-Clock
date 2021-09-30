@@ -15,7 +15,7 @@ var reverseSpan2: HTMLElement | null = document.getElementById('reverseSpan2');
 // var matchedSpan: HTMLElement | null = document.getElementById('matchedSpan');
 
 //generate DateTime object for reversal of OMD
-const reverse: DateTime = DateTime.utc(2021, 9, 29, 5);
+const reverse: DateTime = DateTime.utc(9999, 1, 1, 1);
 
 //generate DateTime object for release of OMD
 const oneMoreDay: DateTime = DateTime.utc(2007, 12, 28, 5);
