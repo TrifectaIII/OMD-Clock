@@ -1,4 +1,5 @@
 const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     // mode: 'development',
@@ -37,8 +38,15 @@ module.exports = {
         extensions: [ '.tsx', '.ts', '.js' ],
     },
 
+    // will build html from src file, injecting script tag automatically.
+    plugins: [
+        new HTMLWebpackPlugin({
+            template: 'src/index.html',
+        }),
+    ],
+
     output: {
-        filename: 'bundle.js',
+        filename: '[id].bundle.js',
         path: path.resolve(__dirname, './docs'),
     },
 };

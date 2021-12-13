@@ -2,35 +2,35 @@
 import './style.scss';
 
 //import date/time library luxon
-import {DateTime, DurationObject} from 'luxon';
+import {DateTime, DateTimeOptions, DurationObject} from 'luxon';
 
 
 //access html elements
 var timeH1: HTMLElement | null = document.getElementById('timeH1');
-var omdSpan: HTMLElement | null = document.getElementById('omdSpan');
+var endSpan: HTMLElement | null = document.getElementById('endSpan');
 var marriedH3: HTMLElement | null = document.getElementById('marriedH3');
-var matchedSpan: HTMLElement | null = document.getElementById('matchedSpan');
+var marriageStartSpan: HTMLElement | null = document.getElementById('marriageStartSpan');
+var marriageEndSpan: HTMLElement | null = document.getElementById('marriageEndSpan');
+var omdH3: HTMLElement | null = document.getElementById('omdH3');
 
-//generate DateTime object for release of OMD
+//DateTime object for release of OMD
+const marriage: DateTime = DateTime.utc(1987, 6, 9, 5);
+//DateTime object for release of OMD
 const oneMoreDay: DateTime = DateTime.utc(2007, 12, 28, 5);
+// DateTime object for reversal of OMD TODO: add actual date
+const reversal: DateTime = DateTime.utc(2021, 1, 1, 1);
 
-//insert date of omd
-omdSpan && (omdSpan.innerHTML = oneMoreDay.toFormat('DDD'));
+//insert date of reversal
+endSpan && (endSpan.innerHTML = reversal.toFormat('DDD'));
 
 // insert time information re: their marriage into HTML
-if (marriedH3 && matchedSpan) {
-    
-    //calculate time between marriage and OMD
-    const marriage: DateTime = DateTime.utc(1987, 6, 9, 5);
-    const diff: DurationObject = dateTimeDiff(marriage, oneMoreDay);
-    marriedH3.innerHTML = durationObjToString(diff, true);
+if (marriedH3 && marriageStartSpan && marriageEndSpan && omdH3) {
 
-    //calculate when OMD clock will match that duration
-    const matched: DateTime = oneMoreDay
-        .plus(diff)
-        .minus({day:1} as DurationObject) //subtract last days duration
-        .toLocal(); //convert to local timezone
-    matchedSpan.innerHTML = matched.toFormat('DDD');
+    marriedH3.innerHTML = durationObjToString(dateTimeDiff(marriage, oneMoreDay), true);
+    marriageStartSpan.innerHTML = marriage.toFormat('DDD');
+    marriageEndSpan.innerHTML = oneMoreDay.toFormat('DDD');
+    omdH3.innerHTML = durationObjToString(dateTimeDiff(oneMoreDay, reversal), true);
+
 }
 
 //execute update function 10 times a second, and immediately
@@ -47,7 +47,7 @@ function update () {
     const now: DateTime = DateTime.utc();
 
     //calculate difference between the DateTimes
-    const durationObj: DurationObject = dateTimeDiff(oneMoreDay, now);
+    const durationObj: DurationObject = dateTimeDiff(reversal, now);
 
     //convert to one string for HTML insertion
     timeH1.innerHTML = durationObjToString(durationObj);
